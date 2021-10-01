@@ -10,6 +10,6 @@ i=0;
 i=$i+1;
 echo "$j"
 
-./byp403.sh $line 
+bash ~/tools/scriptlists/byp403.sh $line 
 
 done 
