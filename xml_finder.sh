@@ -19,7 +19,7 @@ if [ $STATUS = 405 ] && [ $stat = 200 ]
 then
  echo "$(curl --data "param1=value1&param2=value2" -v $line/xmlrpc.php )" 
 
-echo "$line" >> xml_result.txt
+echo "$line" >> ./$domain/$foldername/xml_result.txt
 
  fi
 done
