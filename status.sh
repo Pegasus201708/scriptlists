@@ -27,27 +27,23 @@ if [ ${STATUS} = 200 ]
  
        then 
 
-              echo  "$line" >> forbidden.txt
+              echo  "$line" >> ./$domain/$foldername/status/forbidden.txt
               
                    
 elif [ ${STATUS} = 301 ] || [ ${STATUS} = 302 ] || [ ${STATUS} = 300 ]
  
        then 
 
-              echo  "$line" >> 300_301_302.txt
+              echo  "$line" >> ./$domain/$foldername/status/300_301_302.txt
               
 
 
 else
 
-              echo "$line==>>$STATUS" >> other_st.txt
+              echo "$line==>>$STATUS" >> ./$domain/$foldername/status/other_st.txt
                    
      fi 
 
 done 
-                                                       chmod 777 other_st.txt
-                                                       chmod 777 300_301_302.txt
-                                                       chmod 777 forbidden.txt
-                                                       chmod 777 200.txt
-
+                                                     
 
